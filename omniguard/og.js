@@ -1,31 +1,4 @@
-// Omniguard landing page. Progressive enhancement only.
-// The inline head script un-hides .rv content if this flag never gets set.
-window.cmReady = true;
-
-// "Previous lowest price (30 days):" exactly as the theme block ships it,
-// from extensions/omniguard-badge/locales/*.json.
-const LABELS = [
-  ["EN", "Previous lowest price (30 days):"],
-  ["DE", "Vorheriger niedrigster Preis (30 Tage):"],
-  ["FR", "Prix le plus bas précédent (30 jours) :"],
-  ["ES", "Precio más bajo anterior (30 días):"],
-  ["IT", "Prezzo più basso precedente (30 giorni):"],
-  ["PL", "Poprzednia najniższa cena (30 dni):"],
-  ["NL", "Vorige laagste prijs (30 dagen):"],
-  ["LT", "Ankstesnė mažiausia kaina (30 d.):"],
-  ["PT", "Preço mais baixo anterior (30 dias):"],
-  ["SV", "Tidigare lägsta pris (30 dagar):"],
-  ["DA", "Tidligere laveste pris (30 dage):"],
-  ["NB", "Tidligere laveste pris (30 dager):"],
-  ["FI", "Aiempi alin hinta (30 pv):"],
-  ["CS", "Předchozí nejnižší cena (30 dní):"],
-  ["SK", "Predchádzajúca najnižšia cena (30 dní):"],
-  ["HU", "Korábbi legalacsonyabb ár (30 nap):"],
-  ["RO", "Cel mai mic preț anterior (30 zile):"],
-  ["EL", "Προηγούμενη χαμηλότερη τιμή (30 ημέρες):"],
-  ["ET", "Varasem madalaim hind (30 päeva):"],
-  ["LV", "Iepriekšējā zemākā cena (30 dienas):"],
-];
+// Omniguard landing page. Progressive enhancement only: it reads fine without this file.
 
 const eur = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" });
 const el = (tag, attrs = {}, text) => {
@@ -34,23 +7,6 @@ const el = (tag, attrs = {}, text) => {
   if (text != null) n.textContent = text;
   return n;
 };
-
-// Reveal on scroll
-(() => {
-  const els = document.querySelectorAll(".rv");
-  if (!("IntersectionObserver" in window)) return els.forEach((e) => e.classList.add("in"));
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    },
-    { rootMargin: "0px 0px -8% 0px" },
-  );
-  els.forEach((e) => io.observe(e));
-})();
 
 // Nav switches from transparent-on-green to solid once past the hero top
 (() => {
@@ -82,7 +38,6 @@ const el = (tag, attrs = {}, text) => {
   const was = lab.querySelector(".was");
   const off = lab.querySelector(".off");
   const ref = lab.querySelector(".pdp-ref");
-  const refLabel = ref.querySelector("span");
   const refPrice = ref.querySelector("b");
   const vIcon = lab.querySelector(".verdict .ic");
   const vTitle = lab.querySelector(".verdict b");
@@ -123,7 +78,7 @@ const el = (tag, attrs = {}, text) => {
     todayLabel,
     el("text", { class: "c-axis", x: x(0), y: BASE + 18 }, "30 days ago"),
   );
-  lowOut.textContent = eur.format(LOW);
+  if (lowOut) lowOut.textContent = eur.format(LOW);
   refPrice.textContent = eur.format(LOW);
   was.textContent = eur.format(WAS);
 
@@ -146,15 +101,15 @@ const el = (tag, attrs = {}, text) => {
       const pct = Math.round((1 - p / LOW) * 100);
       vIcon.textContent = "✓";
       vTitle.textContent = pct > 0 ? `Genuine discount — ${pct}% under the 30-day low` : "Matches the 30-day low";
-      vText.textContent = "Omniguard publishes the reference price to your theme. Nothing for you to do.";
+      vText.textContent = "The 30-day low is shown automatically.";
     } else if (state === "warn") {
       vIcon.textContent = "!";
       vTitle.textContent = "Above 30-day low";
-      vText.textContent = `Shoppers will see ${eur.format(LOW)} right under your "sale" price. Omniguard flags this product in your admin.`;
+      vText.textContent = `Shoppers see ${eur.format(LOW)} under your sale price. Omniguard warns you.`;
     } else {
       vIcon.textContent = "–";
       vTitle.textContent = "No discount announced";
-      vText.textContent = "Full price, so there is no reduction to explain. The label stays hidden unless you choose to always show it.";
+      vText.textContent = "Full price, so there is nothing to show.";
     }
   };
 
@@ -164,40 +119,6 @@ const el = (tag, attrs = {}, text) => {
   });
   render();
 
-  // Language chips swap the label wording
-  const chips = lab.querySelector(".langs");
-  LABELS.slice(0, 6).forEach(([code, text], i) => {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.textContent = code;
-    b.setAttribute("aria-pressed", String(i === 0));
-    b.setAttribute("aria-label", `Show label in ${code}`);
-    b.addEventListener("click", () => {
-      chips.querySelectorAll("button").forEach((o) => o.setAttribute("aria-pressed", String(o === b)));
-      ref.classList.add("swap");
-      setTimeout(() => {
-        refLabel.textContent = text;
-        ref.classList.remove("swap");
-      }, 180);
-    });
-    chips.append(b);
-  });
-})();
-
-// Rolling list of all 20 translations (duplicated for a seamless loop)
-(() => {
-  const ul = document.getElementById("roller");
-  if (!ul) return;
-  const row = ([code, text]) => {
-    const li = document.createElement("li");
-    const s = document.createElement("span");
-    const d = document.createElement("div");
-    s.textContent = code;
-    d.textContent = `${text} €820.00`;
-    li.append(s, d);
-    return li;
-  };
-  ul.append(...LABELS.map(row), ...LABELS.map(row));
 })();
 
 // Screenshot gallery arrows
