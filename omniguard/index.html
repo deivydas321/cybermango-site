@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omniguard — 30-day lowest price &amp; EU withdrawal button for Shopify</title>
+  <meta name="description" content="Omniguard shows the EU Omnibus 30-day lowest price next to every discount, adds the EU withdrawal button, and warns you about weak discounts. 20 languages. Free on Shopify Basic and Grow." />
+  <link rel="canonical" href="https://cybermango.ai/omniguard" />
+  <meta name="theme-color" content="#072e22" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cyber Mango" />
+  <meta property="og:title" content="Omniguard — the 30-day lowest price, on every product" />
+  <meta property="og:description" content="EU Omnibus price display, withdrawal button and discount alerts for Shopify. Free on Basic and Grow." />
+  <meta property="og:url" content="https://cybermango.ai/omniguard" />
+  <meta property="og:image" content="https://cybermango.ai/omniguard/img/s-storefront.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://cybermango.ai/omniguard/img/s-storefront.jpg" />
+  <link rel="icon" href="/omniguard/img/icon-64.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/omniguard/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/omniguard/og.css" />
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.cmReady)document.documentElement.classList.remove("js")},2500)</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Omniguard Omnibus & Withdrawal",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Shopify",
+    "url": "https://cybermango.ai/omniguard",
+    "installUrl": "https://apps.shopify.com/omniguard",
+    "image": "https://cybermango.ai/omniguard/img/icon-256.png",
+    "publisher": { "@type": "Organization", "name": "Cyber Mango", "url": "https://cybermango.ai/" },
+    "offers": [
+      { "@type": "Offer", "name": "Shopify Basic/Grow", "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Shopify Advanced", "price": "9.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Shopify Plus", "price": "24.99", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="/omniguard" class="brand" aria-label="Omniguard home">
+        <img src="/omniguard/img/icon-64.png" alt="" width="32" height="32" />
+        Omniguard
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#check">Free check</a>
+        <a href="#features">Features</a>
+        <a href="#setup">Setup</a>
+        <a href="#screens">Screens</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="https://apps.shopify.com/omniguard" class="btn btn-lime btn-sm" rel="noopener">Install free</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="big30" aria-hidden="true">30</div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="crumb"><a href="/">Cyber Mango</a> / Omniguard</p>
+          <a class="rating" href="https://apps.shopify.com/omniguard#adp-reviews" rel="noopener">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span>5.0 on the Shopify App Store</span>
+          </a>
+          <h1>Every sale price has a past. <em>Show it.<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 8C40 2 70 11 105 6s60-3 92 1"/></svg></em></h1>
+          <p class="lede">EU law says a discount must show the lowest price of the last 30 days. Omniguard records your prices, works out that number, and puts it on every product page — in your shopper's language.</p>
+          <div class="cta-row">
+            <a href="https://apps.shopify.com/omniguard" class="btn btn-lime" rel="noopener">Install on Shopify
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#check" class="btn btn-ghost-d">Check my store free</a>
+          </div>
+          <p class="fine">Free on Shopify Basic &amp; Grow · No code · Works on every theme</p>
+        </div>
+
+        <!-- Interactive demo -->
+        <div class="lab" id="lab" data-state="good">
+          <div class="lab-bar mono">
+            <span class="live">Live demo</span>
+            <span>Try it — nothing is saved</span>
+          </div>
+          <div class="lab-body">
+            <div class="chart">
+              <div class="chart-head"><span>Price history · last 30 days</span><span>30-day low <b data-low></b></span></div>
+              <svg class="plot" viewBox="0 0 560 184" role="img" aria-label="Chart of the product's price over the last 30 days with today's price marked"></svg>
+            </div>
+
+            <div class="slider">
+              <div class="slider-top">
+                <label for="price">Set today's sale price <span class="nudge" aria-hidden="true">← drag me</span></label>
+                <output for="price">€750.00</output>
+              </div>
+              <input id="price" type="range" min="650" max="1025" step="5" value="750" />
+            </div>
+
+            <div class="pdp">
+              <div class="pdp-top">
+                <span class="mono">Your product page</span>
+                <div class="langs" role="group" aria-label="Label language"></div>
+              </div>
+              <div class="pdp-title">Oxygen Snowboard</div>
+              <div class="pdp-price">
+                <span class="now">€750.00</span>
+                <span class="was">€1,025.00</span>
+                <span class="off">−27%</span>
+              </div>
+              <div class="pdp-ref"><span>Previous lowest price (30 days):</span> <b>€820.00</b></div>
+            </div>
+
+            <div class="verdict" aria-live="polite">
+              <div class="ic" aria-hidden="true">✓</div>
+              <div><b>Genuine discount</b><span>Omniguard publishes the reference price to your theme. Nothing for you to do.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="wrap">
+        <div class="stats-in rv">
+          <div class="stat"><b>30 days</b><span>of price history, per variant</span></div>
+          <div class="stat"><b>20</b><span>storefront languages</span></div>
+          <div class="stat"><b>Unlimited</b><span>products, tracked daily</span></div>
+          <div class="stat"><b>$0</b><span>on Shopify Basic &amp; Grow</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Free compliance check -->
+    <section class="sec" id="check">
+      <div class="wrap">
+        <div class="check rv">
+          <div class="check-copy">
+            <div class="eyebrow">Free check · no sign-up</div>
+            <h2>Is your store compliant? <span class="g">Find out in 10 seconds.</span></h2>
+            <p>Enter your shop address. We open a few of your discounted products, the way a shopper would, and tell you what's missing.</p>
+            <form class="check-form" id="check-form" data-endpoint="https://omniguard.onrender.com/api/compliance-check" novalidate>
+              <label class="sr" for="check-url">Your shop address</label>
+              <input id="check-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false" placeholder="yourstore.com" required />
+              <button type="submit" class="btn btn-green">Check my store
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+            <p class="check-fine">Reads public pages only. No account and no email needed. An automated check is a starting point, not legal advice.</p>
+          </div>
+
+          <div class="check-out" id="check-out" aria-live="polite">
+            <div class="check-idle">
+              <div class="mono">What we look for</div>
+              <ul>
+                <li><span class="dot" aria-hidden="true">1</span><div><b>30-day lowest price</b>Shown next to every discounted price, as EU Omnibus rules require.</div></li>
+                <li><span class="dot" aria-hidden="true">2</span><div><b>Withdrawal button</b>An online way to withdraw from a contract, easy to find on the site.</div></li>
+                <li><span class="dot" aria-hidden="true">3</span><div><b>Legal guarantee notice</b>Shoppers told about their statutory guarantee rights.</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features bento -->
+    <section class="sec" id="features" style="padding-top:0">
+      <div class="wrap">
+        <div class="head rv">
+          <div class="eyebrow">What you get</div>
+          <h2>One install. <span class="g">Every pricing rule</span> covered.</h2>
+          <p>The reference price is the headline. Everything around it keeps you out of trouble — and all of it is included on every plan.</p>
+        </div>
+
+        <div class="bento">
+          <div class="tile dark w4 rv">
+            <div>
+              <div class="count">20</div>
+              <div>
+                <h3>Speaks your shopper's language</h3>
+                <p>The label is translated out of the box and follows the storefront language. Prefer your own wording? Type it in the theme editor.</p>
+              </div>
+            </div>
+            <div class="roller" aria-hidden="true"><ul id="roller"></ul></div>
+          </div>
+
+          <div class="tile rv" style="--dl:.06s">
+            <div>
+              <h3>Weak-discount alerts</h3>
+              <p>If a price sits above its 30-day low, you'll know before your customers do.</p>
+            </div>
+            <div class="viz alert-row" aria-hidden="true">
+              <div class="r"><a>Snowboard: Liquid</a><span>€779.00</span></div>
+              <div class="r"><span class="badge-warn">Above 30-day low</span><span style="color:var(--mute)">low €749.95</span></div>
+            </div>
+          </div>
+
+          <div class="tile mint rv">
+            <div>
+              <h3>EU withdrawal button</h3>
+              <p>A footer link, a two-step confirmation, a dated email to the shopper, and an inbox for you.</p>
+            </div>
+            <div class="viz wd" aria-hidden="true">
+              <span class="wd-link">Withdraw from contract here</span>
+              <div class="wd-steps"><span>Details</span>→<span>Confirm</span>→<span class="done">Email sent ✓</span></div>
+            </div>
+          </div>
+
+          <div class="tile rv" style="--dl:.06s">
+            <div>
+              <h3>Your label, your theme</h3>
+              <p>Plain text or pill, bold price, optional dot. It inherits your theme's colours and fonts.</p>
+            </div>
+            <div class="viz styles" aria-hidden="true">
+              <span class="s1">Lowest price: <b>€820.00</b></span>
+              <span class="s2">Lowest price: <b>€820.00</b></span>
+              <span class="s3">Lowest price: €820.00</span>
+              <div class="toggle"><i></i>Show only in EU &amp; UK</div>
+            </div>
+          </div>
+
+          <div class="tile dark rv" style="--dl:.12s">
+            <div>
+              <h3>A price log nobody can quietly edit</h3>
+              <p>Every snapshot is hash-chained to the one before it. Export the lot as CSV.</p>
+            </div>
+            <div class="viz chain" aria-hidden="true">
+              <div class="block"><span>#2359 · €749.95</span><b>92679f8b…</b></div>
+              <div class="block"><span>#2360 · €2,629.95</span><b>ba320f55…</b></div>
+              <div class="block"><span>#2361 · €500.00</span><b>13085282…</b></div>
+              <div class="chain-ok">✓ Audit log verified</div>
+            </div>
+          </div>
+
+          <div class="tile w3 rv">
+            <div>
+              <h3>Price-match guarantee &amp; legal notice</h3>
+              <p>An optional guarantee badge on product pages with a claim form behind it, plus one-click access to the official EU legal guarantee notice.</p>
+            </div>
+            <div class="viz lpg" aria-hidden="true">
+              <span class="sh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.500 3.400 8.400 8 9 4.600-.6 8-4.500 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <div><b>Lowest Price Guarantee</b>Found it cheaper elsewhere? Tell us.</div>
+            </div>
+          </div>
+
+          <div class="tile w3 rv" style="--dl:.06s">
+            <div>
+              <h3>No drag on your storefront</h3>
+              <p>The 30-day low is worked out in the background and saved on the product. Your theme reads it like any other field.</p>
+            </div>
+            <div class="viz speed" aria-hidden="true"><b>0</b><span>extra requests when a shopper opens a product page</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Setup -->
+    <section class="sec" id="setup" style="padding-top:0">
+      <div class="wrap">
+        <div class="head rv">
+          <div class="eyebrow">Setup</div>
+          <h2>Live in <span class="g">three steps.</span></h2>
+          <p>No code and no theme files touched. Most stores are done in a few minutes.</p>
+        </div>
+        <div class="steps">
+          <div class="step rv">
+            <h3>Install Omniguard</h3>
+            <p>Prices are recorded right away, then every night, and again whenever a price changes.</p>
+          </div>
+          <div class="step rv" style="--dl:.08s">
+            <h3>Add the block</h3>
+            <p>One click from Settings opens your theme editor. On an older theme, switch on the app embed instead.</p>
+          </div>
+          <div class="step rv" style="--dl:.16s">
+            <h3>Style it and save</h3>
+            <p>Pick your wording and look. The 30-day low goes live on your product pages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens -->
+    <section class="sec gallery-sec" id="screens">
+      <div class="wrap">
+        <div class="gal-head rv">
+          <div class="head">
+            <div class="eyebrow">Inside the app</div>
+            <h2>See it before you install it.</h2>
+          </div>
+          <div class="gal-nav">
+            <button type="button" id="gal-prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg></button>
+            <button type="button" id="gal-next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="gal" id="gal" tabindex="0" aria-label="App screenshots">
+        <figure>
+          <img src="/omniguard/img/s-storefront.jpg" width="1600" height="900" alt="Product page showing the previous lowest price under the price, with wording, style and language options." />
+          <figcaption><b>On your storefront.</b> The 30-day low and legal guarantee link, right on the product page.</figcaption>
+        </figure>
+        <figure>
+          <img src="/omniguard/img/s-alerts.jpg" width="1600" height="900" loading="lazy" alt="Products table with one product flagged as above its 30-day low." />
+          <figcaption><b>Price alerts.</b> Products priced above their 30-day low are flagged.</figcaption>
+        </figure>
+        <figure>
+          <img src="/omniguard/img/s-customize.jpg" width="1600" height="900" loading="lazy" alt="Theme editor settings for the Omniguard lowest price block, including a custom label." />
+          <figcaption><b>Theme editor.</b> Your wording, your style, an EU &amp; UK-only switch.</figcaption>
+        </figure>
+        <figure>
+          <img src="/omniguard/img/s-products.jpg" width="1600" height="900" loading="lazy" alt="Products list showing each product's current price next to its 30-day low and data freshness." />
+          <figcaption><b>Every product, tracked daily.</b> Current price next to the 30-day low.</figcaption>
+        </figure>
+        <figure>
+          <img src="/omniguard/img/s-audit.jpg" width="1600" height="900" loading="lazy" alt="Audit log showing all 2,361 snapshots passing hash-chain verification." />
+          <figcaption><b>Audit log.</b> Hash-chain verified and exportable as CSV.</figcaption>
+        </figure>
+        <figure>
+          <img src="/omniguard/img/s-setup.jpg" width="1600" height="900" loading="lazy" alt="Three setup steps: install Omniguard, add the block, style it and save." />
+          <figcaption><b>Setup.</b> Three steps on any Shopify theme.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Laws -->
+    <section class="sec" id="laws">
+      <div class="wrap">
+        <div class="head rv">
+          <div class="eyebrow">The rules behind it</div>
+          <h2>Built from the directives, <span class="g">not the blog posts.</span></h2>
+        </div>
+        <div class="laws">
+          <div class="law rv">
+            <div class="mono">Directive (EU) 2019/2161</div>
+            <h3>Omnibus prior price</h3>
+            <p>Announce a price reduction and you must show the lowest price of the 30 days before it. Omniguard calculates it per variant and displays it.</p>
+          </div>
+          <div class="law rv" style="--dl:.08s">
+            <div class="mono">Directive 2011/83/EU · Art. 11a</div>
+            <h3>Online withdrawal</h3>
+            <p>Shoppers must be able to withdraw from a contract online as easily as they bought. The withdrawal block handles the flow and the confirmation.</p>
+          </div>
+          <div class="law rv" style="--dl:.16s">
+            <div class="mono">UK CMA guidance</div>
+            <h3>Honest "was" prices</h3>
+            <p>Reference prices should be ones you genuinely charged. The 30-day history and alerts help you show numbers you can back up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="sec" id="pricing" style="padding-top:0">
+      <div class="wrap">
+        <div class="head center rv">
+          <div class="eyebrow">Pricing</div>
+          <h2>Every feature. Every plan.</h2>
+          <p>Your price follows your Shopify plan. Small stores pay nothing.</p>
+        </div>
+        <div class="plans">
+          <div class="plan free rv">
+            <div class="for">Shopify Basic &amp; Grow</div>
+            <div class="price">Free</div>
+            <div class="yr">All paid features, 100% free</div>
+            <ul>
+              <li>Automatic 30-day lowest price display</li>
+              <li>EU withdrawal button &amp; guarantee notice</li>
+              <li>Price-match guarantee on product pages</li>
+              <li>Alerts for prices above the 30-day low</li>
+              <li>Price history CSV export</li>
+              <li>Unlimited products, 20 languages</li>
+            </ul>
+            <a href="https://apps.shopify.com/omniguard" class="btn btn-white" rel="noopener">Install free</a>
+          </div>
+          <div class="plan rv" style="--dl:.08s">
+            <div class="for">Shopify Advanced</div>
+            <div class="price">$9.99 <small>/ month</small></div>
+            <div class="yr">or $99 / year — save 17%</div>
+            <ul>
+              <li>Everything in the free plan</li>
+              <li>24/7 email support</li>
+            </ul>
+            <a href="https://apps.shopify.com/omniguard" class="btn btn-ghost" rel="noopener">Install</a>
+          </div>
+          <div class="plan rv" style="--dl:.16s">
+            <div class="for">Shopify Plus</div>
+            <div class="price">$24.99 <small>/ month</small></div>
+            <div class="yr">or $249 / year — save 17%</div>
+            <ul>
+              <li>Everything in the free plan</li>
+              <li>24/7 email support</li>
+            </ul>
+            <a href="https://apps.shopify.com/omniguard" class="btn btn-ghost" rel="noopener">Install</a>
+          </div>
+        </div>
+        <p class="plans-note">Billed in USD through Shopify. Current prices are always on the App Store listing.</p>
+      </div>
+    </section>
+
+    <!-- Review -->
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="review rv">
+          <div class="score">
+            <b>5.0</b>
+            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <a href="https://apps.shopify.com/omniguard#adp-reviews" rel="noopener">Read the reviews</a>
+          </div>
+          <div>
+            <blockquote>"The app is easy to set up and use, the pricing is very reasonable."</blockquote>
+            <cite>noordinaryleaf, Croatia — Shopify App Store review</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec" id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="head center rv">
+          <div class="eyebrow">Questions</div>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq rv">
+          <details>
+            <summary>What does the Omnibus Directive actually require?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>When you announce a price reduction in the EU, you must also show the lowest price the product had during the 30 days before the reduction. Omniguard records your prices continuously, works out that number and displays it next to the discount.</p>
+          </details>
+          <details>
+            <summary>Will it slow down my store?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>No. The reference price is calculated in the background and saved on the product as a metafield. Your theme reads it like any other product field, with no extra requests when a page loads.</p>
+          </details>
+          <details>
+            <summary>Do I need a developer?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>No. Install from the Shopify App Store and add the Omniguard block in the theme editor. Older themes can use the app embed instead. No theme files are edited.</p>
+          </details>
+          <details>
+            <summary>Which products are tracked?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>Every active and unlisted product and variant, with no limit on catalogue size. Draft and archived prices were never offered to shoppers, so they don't count toward the 30-day low.</p>
+          </details>
+          <details>
+            <summary>I only sell partly in the EU. Can I hide it elsewhere?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>Yes. A switch in the block settings shows the label only to shoppers in the EU/EEA, the United Kingdom and Switzerland.</p>
+          </details>
+          <details>
+            <summary>Can I prove my price history if someone asks?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>Yes. Each snapshot is chained to the previous one with a SHA-256 hash, so a change to past records is detectable. The audit log shows the verification result and exports as CSV.</p>
+          </details>
+          <details>
+            <summary>Is this legal advice?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <p>No. Omniguard is a tool that helps you meet your pricing obligations. How the rules apply to your business is a question for your own legal adviser.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final rv">
+      <h2>Compliant by<br>this afternoon.</h2>
+      <p>Install Omniguard, add one block, and the 30-day low is on your product pages.</p>
+      <div class="cta-row">
+        <a href="https://apps.shopify.com/omniguard" class="btn btn-white" rel="noopener">Install on Shopify
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:david@cybermango.dev?subject=Omniguard%20question" class="btn btn-ghost-d">Ask a question</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a href="/omniguard" class="brand"><img src="/omniguard/img/icon-64.png" alt="" width="32" height="32" />Omniguard</a>
+          <p class="by">Made by <a href="/">Cyber Mango</a> in Vilnius, Lithuania.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="https://apps.shopify.com/omniguard" rel="noopener">Shopify App Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Compliance</h4>
+          <ul>
+            <li><a href="#laws">EU Omnibus</a></li>
+            <li><a href="#laws">Withdrawal button</a></li>
+            <li><a href="#laws">UK CMA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">Cyber Mango</a></li>
+            <li><a href="mailto:david@cybermango.dev">Support</a></li>
+            <li><a href="https://omniguard.onrender.com/privacy" rel="noopener">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bar">
+        <span>© <span data-year>2026</span> Cyber Mango. All rights reserved.</span>
+        <span>Shopify is a trademark of Shopify Inc. Omniguard is not legal advice.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/omniguard/og.js" defer></script>
+</body>
+</html>
